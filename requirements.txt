@@ -1,0 +1,6 @@
+pytest>=7.3.1
+selene>=2.0.0.rc2
+requests>=2.28.2
+pypdf>=3.8.1
+xlrd>=2.0.1
+openpyxl>=3.1.2
