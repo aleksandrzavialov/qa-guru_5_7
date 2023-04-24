@@ -9,6 +9,8 @@ PROJECT_TMP_PATH = os.path.join(PROJECT_ROOT_PATH, 'tmp')
 
 @pytest.fixture(scope='session', autouse=True)
 def clear_tmp_directory():
+    if not os.path.exists(PROJECT_TMP_PATH):
+        os.mkdir(PROJECT_TMP_PATH)
     folder_path = PROJECT_TMP_PATH
     for file_object in os.listdir(folder_path):
         file_object_path = os.path.join(folder_path, file_object)
