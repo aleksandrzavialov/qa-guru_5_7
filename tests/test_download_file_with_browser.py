@@ -21,6 +21,8 @@ def test_file_downloading_via_browser():
     browser.element(".d-none .Button-label").click()
     browser.element('[data-open-app="link"]').click()
     time.sleep(10)
+    browser.quit()
+
     downloaded_file = os.path.join(PROJECT_TMP_PATH, 'pytest-main.zip')
     size = os.path.getsize(downloaded_file)
     assert size > 1000000
